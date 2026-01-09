@@ -1,0 +1,17 @@
+{
+  "name": "hackr",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:server & npm run dev:web",
+    "dev:server": "npm run dev -w @hackr/server",
+    "dev:web": "npm run dev -w @hackr/web",
+    "build": "npm run build -ws",
+    "db:migrate": "npm run db:migrate -w @hackr/server"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
